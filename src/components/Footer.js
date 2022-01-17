@@ -7,9 +7,11 @@ import RoomIcon from '@material-ui/icons/Room'
 import PhoneIcon from '@material-ui/icons/Phone'
 import MailOutlineIcon from '@material-ui/icons/MailOutline'
 import CardLogos from '../assets/cardlogos.jpg'
+import { mobile } from '../responsive'
 
 const Container = styled.div`
 	display: flex;
+	${mobile({ flexDirection: 'column' })}
 `
 const Left = styled.div`
 	flex: 1;
@@ -20,10 +22,12 @@ const Left = styled.div`
 const Center = styled.div`
 	flex: 1;
 	padding: 20px;
+	${mobile({ display: 'none' })}
 `
 const Right = styled.div`
 	flex: 1;
 	padding: 20px;
+	${mobile({ backgroundColor: 'lightgray' })}
 `
 const Logo = styled.h1``
 const Description = styled.p`
